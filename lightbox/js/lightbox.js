@@ -205,6 +205,9 @@
 
             // 把遮罩和弹窗插入到body
             this.bodyNode.append(this.popupMask,this.popupWin);
+        },
+        test: function () {
+            console.log('test')
         }
     };
 

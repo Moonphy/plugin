@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .slide{
+            max-width: 1020px;
+            height: 120px;
+            position: relative;
+        }
+        .slide ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .slide ul li{
+            list-style: none;
+            float: left;
+        }
+        .top-swipe{
+            margin: 30px auto;
+        }
+        .top-swipe{
+            max-width: 1100px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .index-btn{
+            width: 100%;
+            text-align: center;
+        }
+        .index-btn span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #000101;
+            cursor: pointer;
+        }
+        .index-btn .active{
+            background: #006600;
+        }
+        .test-swipe{
+            width: 1160px;
+            position: relative;
+        }
+        .btn-left,.btn-right{
+            width: 20px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #000101;
+            opacity: .3;
+            position: absolute;
+            top: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 40px;
+            text-align: center;
+        }
+        .btn-left:hover,.btn-right:hover{
+            opacity: .8;
+        }
+        .btn-left{
+            left: 0;
+        }
+        .btn-right{
+            right: 0;
+        }
+        .test-swipe-2{
+            width: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="test-swipe">
+    <div class="top-swipe">
+        <div class="slide slide-1">
+            <ul id="new">
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="index-btn">
+            <span class="active"></span>
+        </div>
+    </div>
+    <div class="slide-btn">
+        <a href="javascript: void(0);" class="btn btn-left">&lt;</a>
+        <a href="javascript: void(0);" class="btn btn-right">&gt;</a>
+    </div>
+</div>
+<div class="test-swipe-2">
+    <div class="center-swipe">
+        <div class="slide slide-2">
+            <ul id="center">
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+                <li><a href=""><img src="../img/test.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="index-btn">
+            <span class="active"></span>
+        </div>
+    </div>
+    <div class="slide-btn">
+        <a href="javascript: void(0);" class="btn btn-left">&lt;</a>
+        <a href="javascript: void(0);" class="btn btn-right">&gt;</a>
+    </div>
+</div>
+
+
+
+
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="../js/swipePC.js"></script>
+<script>
+    var newSwiper = new swipePC('#new', {
+        "size": 6,
+        "scrollTime": 2000,
+        "playTime": 4000,
+        "auto": false
+    });
+
+    var newSwiper2 = new swipePC('#center', {
+        "size": 1,
+        "playTime": 3000,
+        "auto": true
+    })
+</script>
+</body>
+</html>
