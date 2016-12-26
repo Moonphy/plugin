@@ -46,13 +46,20 @@
         <a href="javascript:;" class="lightbox-close-btn">&Chi;</a>
     </div>
 </div>-->
-
+<button id="button">点我！</button>
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
 <script type="text/javascript" src="js/lightbox.js"></script>
 <script>
     $(function () {
         var lightbox = new LightBox();
+
+        $('#button').click(function () {
+            lightbox.test();
+        })
     });
+</script>
+<script>
+
 </script>
 </body>
 </html>
