@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评论功能</title>
+    <link rel="stylesheet" href="./css/comment-renren.css">
+    <script src="./js/script.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            margin: 10px 0;
+        }
+        a{
+            text-decoration: none;
+            color: #666666;
+        }
+        .comment-wrap{
+            width: 640px;
+            margin: 50px auto;
+        }
+        .item{
+            position: relative;
+        }
+        .btn-close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.6);
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .avatar{
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            float: left;
+        }
+        .avatar img{
+            width: 100%;
+        }
+        .content, .comment-content{
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+<div class="comment-wrap">
+    <ul class="list" id="list">
+        <li class="item">
+            <a href="javascript: void(0);" class="btn-close">X</a>
+            <div class="avatar">
+                <img src="./img/1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="main">
+                    <p>
+                        <span class="user">林明辉: </span>
+                        轻轻的我走了, 正如我轻轻的来, 我轻轻的招手, 作别西天的云彩.
+                    </p>
+                </div>
+                <div class="info">
+                    <span class="time">2016-12-27</span>
+                    <a href="javascript:;" class="btn-praise">👍</a>
+                </div>
+                <div class="praises-total" data-total="4" style="display: block;">4个人觉得很赞</div>
+                <ul class="comment-list">
+                    <li class="comment-item" user="self">
+                        <div class="avatar">
+                            <img src="./img/1.jpg" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-text">
+                                <span class="user">我: </span>
+                                写的太好了.
+                            </div>
+                            <div class="comment-time">
+                                2016-12-28
+                                <a href="javascript:;" class="comment-praise">1 赞</a>
+                                <a href="javascript:;" class="comment-comment">评论</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
