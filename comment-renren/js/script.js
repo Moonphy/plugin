@@ -23,4 +23,13 @@ window.onload = function () {
     function removeNode(node){
         node.parentNode.removeChild(node);
     }
+    function getTime(){
+        var t = new Date();
+        var y = t.getFullYear(),
+            m = t.getMonth() + 1,
+            d = t.getDay();
+        m = m < 10 ? '0' + m : m;
+        d = d < 10 ? '0' + d : d;
+        return y + '-' + m + '-' + d;
+    }
 };
